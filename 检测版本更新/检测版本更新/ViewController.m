@@ -10,7 +10,9 @@
 #import "ZCHVersionDetection.h"
 #import <StoreKit/StoreKit.h>
 
-@interface ViewController ()
+@interface ViewController () <UIAlertViewDelegate>
+
+@property (nonatomic ,strong) NSURL *trackViewUrl;
 
 @end
 
@@ -28,32 +30,43 @@
         NSLog(@"Store下载地址:%@",trackViewUrl);
         NSLog(@"Store上版本号:%@",version);
         NSLog(@"Store更新内容:%@",releaseNotes);
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"最新版本:%@",version] message:[NSString stringWithFormat:@"更新内容:%@",releaseNotes] preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"暂时不更新" style:UIAlertActionStyleCancel handler:nil]];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            //jump to AppStore
-            //1.jump
-            [[UIApplication sharedApplication] openURL:trackViewUrl];
 
-            ////
-//            //2.modal
-//            SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
-//            storeViewController.delegate = self;
-//            NSDictionary *parametersDic = @{SKStoreProductParameterITunesItemIdentifier:[userDefault objectForKey:TRACK_ID]};
-//            [storeViewController loadProductWithParameters:parametersDic completionBlock:^(BOOL result, NSError * _Nullable error) {
-//
-//                if (result) {
-//                    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:storeViewController animated:YES completion:^{
-//
-//                    }];
-//                }
-//            }];
-            ////
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"最新版本:%@",version] message:[NSString stringWithFormat:@"更新内容:%@",releaseNotes] delegate:self cancelButtonTitle:@"暂时不更新" otherButtonTitles:@"立即更新", nil];
+        self.trackViewUrl = trackViewUrl;
+        [alertView show];
 
-        }]];
-        [self presentViewController:alertController animated:YES completion:nil];
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"最新版本:%@",version] message:[NSString stringWithFormat:@"更新内容:%@",releaseNotes] preferredStyle:UIAlertControllerStyleAlert];
+//        [alertController addAction:[UIAlertAction actionWithTitle:@"暂时不更新" style:UIAlertActionStyleCancel handler:nil]];
+//        [alertController addAction:[UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            //jump to AppStore
+//            //1.jump
+//            [[UIApplication sharedApplication] openURL:trackViewUrl];
+//
+//            ////
+////            //2.modal
+////            SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
+////            storeViewController.delegate = self;
+////            NSDictionary *parametersDic = @{SKStoreProductParameterITunesItemIdentifier:[userDefault objectForKey:TRACK_ID]};
+////            [storeViewController loadProductWithParameters:parametersDic completionBlock:^(BOOL result, NSError * _Nullable error) {
+////
+////                if (result) {
+////                    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:storeViewController animated:YES completion:^{
+////
+////                    }];
+////                }
+////            }];
+//            ////
+//
+//        }]];
+//        [self presentViewController:alertController animated:YES completion:nil];
 
     }];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.firstOtherButtonIndex == buttonIndex) {
+        [[UIApplication sharedApplication] openURL:self.trackViewUrl];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -60,9 +60,9 @@
                         _versionDetectionBlock(YES, _resultsDic, [NSURL URLWithString:urlString], [_resultsDic objectForKey:@"version"], [_resultsDic objectForKey:@"releaseNotes"]);
                     }
                 } else {
-                    if (_versionDetectionBlock) {
-                        _versionDetectionBlock(NO, _resultsDic, [NSURL URLWithString:urlString], [_resultsDic objectForKey:@"version"], [_resultsDic objectForKey:@"releaseNotes"]);
-                    }
+//                    if (_versionDetectionBlock) {
+//                        _versionDetectionBlock(NO, _resultsDic, [NSURL URLWithString:urlString], [_resultsDic objectForKey:@"version"], [_resultsDic objectForKey:@"releaseNotes"]);
+//                    }
                 }
             });
         }] resume];
