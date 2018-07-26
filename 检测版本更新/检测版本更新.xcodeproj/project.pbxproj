@@ -13,7 +13,7 @@
 		43161EB02060BDCE00B01294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43161EAF2060BDCE00B01294 /* Assets.xcassets */; };
 		43161EB32060BDCE00B01294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43161EB12060BDCE00B01294 /* LaunchScreen.storyboard */; };
 		43161EB62060BDCE00B01294 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43161EB52060BDCE00B01294 /* main.m */; };
-		43161EBE2060BE2B00B01294 /* ZCHVersionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 43161EBD2060BE2B00B01294 /* ZCHVersionDetection.m */; };
+		43161EBE2060BE2B00B01294 /* CHVersionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 43161EBD2060BE2B00B01294 /* CHVersionDetection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		43161EB22060BDCE00B01294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43161EB42060BDCE00B01294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43161EB52060BDCE00B01294 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		43161EBC2060BE2B00B01294 /* ZCHVersionDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCHVersionDetection.h; sourceTree = "<group>"; };
-		43161EBD2060BE2B00B01294 /* ZCHVersionDetection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCHVersionDetection.m; sourceTree = "<group>"; };
+		43161EBC2060BE2B00B01294 /* CHVersionDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHVersionDetection.h; sourceTree = "<group>"; };
+		43161EBD2060BE2B00B01294 /* CHVersionDetection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHVersionDetection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +65,8 @@
 				43161EA72060BDCE00B01294 /* AppDelegate.m */,
 				43161EA92060BDCE00B01294 /* ViewController.h */,
 				43161EAA2060BDCE00B01294 /* ViewController.m */,
-				43161EBC2060BE2B00B01294 /* ZCHVersionDetection.h */,
-				43161EBD2060BE2B00B01294 /* ZCHVersionDetection.m */,
+				43161EBC2060BE2B00B01294 /* CHVersionDetection.h */,
+				43161EBD2060BE2B00B01294 /* CHVersionDetection.m */,
 				43161EAC2060BDCE00B01294 /* Main.storyboard */,
 				43161EAF2060BDCE00B01294 /* Assets.xcassets */,
 				43161EB12060BDCE00B01294 /* LaunchScreen.storyboard */,
@@ -149,7 +149,7 @@
 			files = (
 				43161EAB2060BDCE00B01294 /* ViewController.m in Sources */,
 				43161EB62060BDCE00B01294 /* main.m in Sources */,
-				43161EBE2060BE2B00B01294 /* ZCHVersionDetection.m in Sources */,
+				43161EBE2060BE2B00B01294 /* CHVersionDetection.m in Sources */,
 				43161EA82060BDCE00B01294 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ZCHVersionDetection.h
+//  CHVersionDetection.h
 //  检测版本更新
 //
 //  Created by 张晨晖 on 2018/3/20.
@@ -22,10 +22,10 @@
  @param version 版本号
  @param releaseNotes 本次更新内容
  */
-typedef void(^ZCHVersionDetectionBlock)(BOOL hasNewVersion ,NSDictionary *infoDic ,NSURL *trackViewUrl ,NSString *version ,NSString *releaseNotes);
+typedef void(^CHVersionDetectionBlock)(BOOL hasNewVersion ,NSDictionary *infoDic ,NSURL *trackViewUrl ,NSString *version ,NSString *releaseNotes);
 
-@interface ZCHVersionDetection : NSObject
+@interface CHVersionDetection : NSObject
 
-+ (void)versionDetctionWithAppIDString:(NSString *)appID andresultBlock:(ZCHVersionDetectionBlock) block;
++ (void)versionDetctionWithAppIDString:(NSString *)appID andresultBlock:(CHVersionDetectionBlock) block;
 
 @end

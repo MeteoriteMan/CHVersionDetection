@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ZCHVersionDetection.h"
+#import "CHVersionDetection.h"
 #import <StoreKit/StoreKit.h>
 
 @interface ViewController () <UIAlertViewDelegate>
@@ -24,7 +24,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [ZCHVersionDetection versionDetctionWithAppIDString:@"1262247888" andresultBlock:^(BOOL hasNewVersion, NSDictionary *infoDic, NSURL *trackViewUrl, NSString *version, NSString *releaseNotes) {
+    [CHVersionDetection versionDetctionWithAppIDString:@"1262247888" andresultBlock:^(BOOL hasNewVersion, NSDictionary *infoDic, NSURL *trackViewUrl, NSString *version, NSString *releaseNotes) {
         NSLog(@"%@",hasNewVersion == YES? @"有新版本":@"没有新版本");
         NSLog(@"infoDic:%@",infoDic);
         NSLog(@"Store下载地址:%@",trackViewUrl);

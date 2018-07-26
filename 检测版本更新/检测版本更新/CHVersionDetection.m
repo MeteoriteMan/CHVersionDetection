@@ -1,34 +1,34 @@
 //
-//  ZCHVersionDetection.m
+//  CHVersionDetection.m
 //  检测版本更新
 //
 //  Created by 张晨晖 on 2018/3/20.
 //  Copyright © 2018年 张晨晖. All rights reserved.
 //
 
-#import "ZCHVersionDetection.h"
+#import "CHVersionDetection.h"
 
-@interface ZCHVersionDetection()
+@interface CHVersionDetection()
 
 @property (nonatomic ,strong) NSString *appID;
 
 @property (nonatomic ,strong) NSDictionary *resultsDic;
 
-@property (nonatomic ,copy) ZCHVersionDetectionBlock versionDetectionBlock;
+@property (nonatomic ,copy) CHVersionDetectionBlock versionDetectionBlock;
 
 @end
 
-@implementation ZCHVersionDetection
+@implementation CHVersionDetection
 
-+ (void)versionDetctionWithAppIDString:(NSString *)appID andresultBlock:(ZCHVersionDetectionBlock) block {
-    ZCHVersionDetection *versionDetection = [[ZCHVersionDetection alloc] init];
++ (void)versionDetctionWithAppIDString:(NSString *)appID andresultBlock:(CHVersionDetectionBlock)block {
+    CHVersionDetection *versionDetection = [[CHVersionDetection alloc] init];
     versionDetection.appID = appID;
     versionDetection.versionDetectionBlock = block;
     [versionDetection getInfo];
 }
 
 - (NSString *)appID {
-    if (!_appID) {//占位QQ:"444934666"我公司的"1262247888"
+    if (!_appID) {//使用QQ的APPID来占位:"444934666"
         _appID = @"444934666";
     }
     return _appID;
