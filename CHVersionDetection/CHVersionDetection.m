@@ -51,13 +51,13 @@
                 return;
             }
             NSArray *array = [dataDic objectForKey:@"results"];
-            _resultsDic = array[0];
+            self.resultsDic = array[0];
             dispatch_sync(dispatch_get_main_queue(), ^{
                 //回调.回到主线程
-                NSString *urlString = [_resultsDic objectForKey:@"trackViewUrl"];
-                if ([self compareVersion:[_resultsDic objectForKey:@"version"]] == YES) {
-                    if (_versionDetectionBlock) {
-                        _versionDetectionBlock(YES, _resultsDic, [NSURL URLWithString:urlString], [_resultsDic objectForKey:@"version"], [_resultsDic objectForKey:@"releaseNotes"]);
+                NSString *urlString = [self.resultsDic objectForKey:@"trackViewUrl"];
+                if ([self compareVersion:[self.resultsDic objectForKey:@"version"]] == YES) {
+                    if (self.versionDetectionBlock) {
+                        self.versionDetectionBlock(YES, self.resultsDic, [NSURL URLWithString:urlString], [self.resultsDic objectForKey:@"version"], [self.resultsDic objectForKey:@"releaseNotes"]);
                     }
                 } else {
 //                    if (_versionDetectionBlock) {
