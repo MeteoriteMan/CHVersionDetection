@@ -42,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		430DE547210E1F8700388416 /* CHVersionDetection */ = {
+			isa = PBXGroup;
+			children = (
+				43161EBC2060BE2B00B01294 /* CHVersionDetection.h */,
+				43161EBD2060BE2B00B01294 /* CHVersionDetection.m */,
+			);
+			path = CHVersionDetection;
+			sourceTree = SOURCE_ROOT;
+		};
 		43161E9A2060BDCE00B01294 = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +74,7 @@
 				43161EA72060BDCE00B01294 /* AppDelegate.m */,
 				43161EA92060BDCE00B01294 /* ViewController.h */,
 				43161EAA2060BDCE00B01294 /* ViewController.m */,
-				43161EBC2060BE2B00B01294 /* CHVersionDetection.h */,
-				43161EBD2060BE2B00B01294 /* CHVersionDetection.m */,
+				430DE547210E1F8700388416 /* CHVersionDetection */,
 				43161EAC2060BDCE00B01294 /* Main.storyboard */,
 				43161EAF2060BDCE00B01294 /* Assets.xcassets */,
 				43161EB12060BDCE00B01294 /* LaunchScreen.storyboard */,

@@ -28,8 +28,8 @@
 }
 
 - (NSString *)appID {
-    if (!_appID) {//使用QQ的APPID来占位:"444934666"
-        _appID = @"444934666";
+    if (!_appID) {
+        _appID = @"";
     }
     return _appID;
 }

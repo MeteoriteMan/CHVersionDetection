@@ -24,7 +24,17 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [CHVersionDetection versionDetctionWithAppIDString:@"1262247888" andresultBlock:^(BOOL hasNewVersion, NSDictionary *infoDic, NSURL *trackViewUrl, NSString *version, NSString *releaseNotes) {
+
+    /**
+     版本号检测调用方法
+
+     @param hasNewVersion 是否有新版本
+     @param infoDic 回调整体信息
+     @param trackViewUrl 下载地址
+     @param version 版本号
+     @param releaseNotes 更新信息
+     */
+    [CHVersionDetection versionDetctionWithAppIDString:@"444934666" andresultBlock:^(BOOL hasNewVersion, NSDictionary *infoDic, NSURL *trackViewUrl, NSString *version, NSString *releaseNotes) {
         NSLog(@"%@",hasNewVersion == YES? @"有新版本":@"没有新版本");
         NSLog(@"infoDic:%@",infoDic);
         NSLog(@"Store下载地址:%@",trackViewUrl);
