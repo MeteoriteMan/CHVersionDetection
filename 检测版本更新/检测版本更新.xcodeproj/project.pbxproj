@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430DE54B210E223F00388416 /* CHVersionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 430DE549210E223F00388416 /* CHVersionDetection.m */; };
 		43161EA82060BDCE00B01294 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43161EA72060BDCE00B01294 /* AppDelegate.m */; };
 		43161EAB2060BDCE00B01294 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43161EAA2060BDCE00B01294 /* ViewController.m */; };
 		43161EAE2060BDCE00B01294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43161EAC2060BDCE00B01294 /* Main.storyboard */; };
 		43161EB02060BDCE00B01294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43161EAF2060BDCE00B01294 /* Assets.xcassets */; };
 		43161EB32060BDCE00B01294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43161EB12060BDCE00B01294 /* LaunchScreen.storyboard */; };
 		43161EB62060BDCE00B01294 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43161EB52060BDCE00B01294 /* main.m */; };
-		43161EBE2060BE2B00B01294 /* CHVersionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 43161EBD2060BE2B00B01294 /* CHVersionDetection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430DE549210E223F00388416 /* CHVersionDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHVersionDetection.m; sourceTree = "<group>"; };
+		430DE54A210E223F00388416 /* CHVersionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHVersionDetection.h; sourceTree = "<group>"; };
 		43161EA32060BDCE00B01294 /* 检测版本更新.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "检测版本更新.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43161EA62060BDCE00B01294 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		43161EA72060BDCE00B01294 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -27,8 +29,6 @@
 		43161EB22060BDCE00B01294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43161EB42060BDCE00B01294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43161EB52060BDCE00B01294 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		43161EBC2060BE2B00B01294 /* CHVersionDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHVersionDetection.h; sourceTree = "<group>"; };
-		43161EBD2060BE2B00B01294 /* CHVersionDetection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHVersionDetection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,14 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		430DE547210E1F8700388416 /* CHVersionDetection */ = {
+		430DE548210E223F00388416 /* CHVersionDetection */ = {
 			isa = PBXGroup;
 			children = (
-				43161EBC2060BE2B00B01294 /* CHVersionDetection.h */,
-				43161EBD2060BE2B00B01294 /* CHVersionDetection.m */,
+				430DE549210E223F00388416 /* CHVersionDetection.m */,
+				430DE54A210E223F00388416 /* CHVersionDetection.h */,
 			);
-			path = CHVersionDetection;
-			sourceTree = SOURCE_ROOT;
+			name = CHVersionDetection;
+			path = ../../CHVersionDetection;
+			sourceTree = "<group>";
 		};
 		43161E9A2060BDCE00B01294 = {
 			isa = PBXGroup;
@@ -70,11 +71,11 @@
 		43161EA52060BDCE00B01294 /* 检测版本更新 */ = {
 			isa = PBXGroup;
 			children = (
+				430DE548210E223F00388416 /* CHVersionDetection */,
 				43161EA62060BDCE00B01294 /* AppDelegate.h */,
 				43161EA72060BDCE00B01294 /* AppDelegate.m */,
 				43161EA92060BDCE00B01294 /* ViewController.h */,
 				43161EAA2060BDCE00B01294 /* ViewController.m */,
-				430DE547210E1F8700388416 /* CHVersionDetection */,
 				43161EAC2060BDCE00B01294 /* Main.storyboard */,
 				43161EAF2060BDCE00B01294 /* Assets.xcassets */,
 				43161EB12060BDCE00B01294 /* LaunchScreen.storyboard */,
@@ -157,8 +158,8 @@
 			files = (
 				43161EAB2060BDCE00B01294 /* ViewController.m in Sources */,
 				43161EB62060BDCE00B01294 /* main.m in Sources */,
-				43161EBE2060BE2B00B01294 /* CHVersionDetection.m in Sources */,
 				43161EA82060BDCE00B01294 /* AppDelegate.m in Sources */,
+				430DE54B210E223F00388416 /* CHVersionDetection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
